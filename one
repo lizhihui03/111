@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    int maxSum = -100;
+    int nowSum = 0;
+    printf("请选择输入多少个数:");
+    scanf_s("%d", &n);
+    printf("请输入数据:");
+    for (int i = 1; i <= n; i++)
+    {
+        int num;
+       
+        scanf_s("%d", &num);
+        nowSum += num;
+        if (nowSum > maxSum)maxSum = nowSum;
+        if (nowSum < 0)nowSum = 0;
+
+    }
+    printf("最大和为:");
+    printf("%d", maxSum);
+    return 0;
+}
+
